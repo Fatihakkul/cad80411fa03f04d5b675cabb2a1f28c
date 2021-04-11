@@ -1,0 +1,25 @@
+@import 'globalstyles';
+
+.singleselect {
+    width: 100vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .singleselect {
+      width: 60vh;
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .singleselect {
+        width: 50vh;
+    }
+}
+@media (max-width: $breakpoint-smphone) {
+      .singleselect {
+        width: 40vh;
+    }
+}
+  

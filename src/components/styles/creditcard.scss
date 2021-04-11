@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import 'globalstyles';
+
+.credit-card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    @include borderradius(15px);
+    color: $background_white_color;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.rotate {
+    transform: rotateY(180deg);
+}
+
+.credit-card-back {
+    @extend .credit-card-style;
+    justify-content: space-evenly;
+    backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #0f509e;
+    transform: rotateY(180deg);
+    
+}
+
+.credit-card-front {
+    @extend .credit-card-style;
+    justify-content: space-between;
+    padding: 25px;
+    backface-visibility: hidden;
+}
+
+.credit-card__number {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+}
+
+.credit-card__info {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+}
+
+.credit-card__info_label {
+    font-size: 1rem;
+}
+
+.credit-card__info_expiry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px 10px 0px 10px;
+}
+.back-line {
+    width: 100%;
+    height: 40px;
+    background-color: $color-black;
+}

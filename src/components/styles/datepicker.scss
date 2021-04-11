@@ -1,0 +1,14 @@
+@import 'globalstyles';
+
+
+.datepicker-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    text {
+        color: $color-black;
+        font-size: medium;
+        font-weight: bold;
+    }
+}

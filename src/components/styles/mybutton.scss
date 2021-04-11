@@ -1,0 +1,30 @@
+@import 'globalstyles';
+
+
+@media (max-width: $breakpoint-mdtablet) {
+      .button {
+          width: 100px;
+          text {
+            font-size: 0.5rem  !important;
+        }
+      }
+     
+}
+.button {
+    background-color: $button-background-color;
+    @include borderradius(5px);
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+    min-width: 100px;
+    min-height: 40px;
+    transition: all 0.5ms ease;
+     text {
+        color: $light_white;        
+        font-size: 1em;
+    }
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    }
+}

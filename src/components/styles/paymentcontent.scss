@@ -1,0 +1,261 @@
+@import 'globalstyles';
+
+
+@media (min-width: $breakpoint-tablet) {
+    .payment-content-container {
+      height: 500px;
+    }
+  }
+  
+  @media (max-width: $breakpoint-mdtablet) {
+        .payment-content-container {
+            flex-direction: column !important;
+            width: 450px !important;
+        }
+        .credit-card-container {
+            padding: 10px 0px 10px 0px;
+        }
+    }
+  @media (max-width: $breakpoint-smphone) {
+        .payment-content-container {
+            flex-direction: column !important;
+            width: 350px !important;
+            overflow-y: auto;
+            justify-content: unset !important;
+           
+      }
+        .credit-card-container {
+            width: 100% !important;
+        }
+        .price-info-container {
+            width: 100% !important;
+            margin-top: 10px;
+        }
+        .form-column-cvv {
+            padding-top: 15px;
+        }
+    }
+    
+.payment-content-container {
+    @extend .al-center-fd-row;
+    width: 120vh;
+    justify-content: space-evenly;
+   
+    .credit-card-container {
+        @extend .al-center-jc-center;
+        width: 50vh;
+        height: 100%;
+        flex-direction: column;
+       border : 1px solid rgb(219,219,219);
+        @include borderradius(10px);
+        .credit-card-view {
+            width: 90% ;
+            height: 35%;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .credit-card-header {
+                @extend .al-center-fd-row ;
+                justify-content: space-between;
+               
+                .card-security{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+        }
+        .user-credit-card-info {
+            width: 90% ;
+            height: 50%;
+            background-color: $light_white;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 10px;
+            @include borderradius(10px);
+            label {
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+            .form-group {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                padding: 10px;
+                input {
+                    width: 100%;
+                    border: 1px solid rgb(219,219,219);
+                    padding-left: 5px;
+                    &:focus {
+                        outline: none;
+                       
+                    }
+                }
+              
+            }
+
+            .form-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0px 5px 0px 5px;
+                width: 100%;
+                select {
+                    width: 40%;
+                    margin-top: 5px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .form-column {
+                    display: flex;
+                    flex-direction: column;
+                    width: 48%;
+                }
+
+                .form-column-cvv {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 48%;
+                    input {
+                        width: 68%;
+                        margin-top: 5px;
+                        border: 1px solid rgb(219,219,219);
+                        padding-left: 5px;
+                      
+                        &:focus {
+                            outline: none;
+                           
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .price-info-container {
+        width: 40vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 20px 20px;
+        background-color: $light_white;
+        @include borderradius(10px);
+
+        .horizontal-div {
+            @extend .al-center-fd-row ;
+            justify-content: space-between;
+            margin-top: 5px;
+            &-info {
+                @extend .al-center-fd-column; 
+                width: 120px;
+                height: 60px;
+                background-color: $background_white_color;
+                justify-content: space-evenly;
+                @include borderradius(5px);
+
+
+                text {
+                    font-weight: 600;
+                }
+                text:first-child {
+                    font-size: 1rem;
+                    color: $color-black;
+                    font-weight: bold;
+                }
+
+            }
+
+        }
+        .horizontal-div-code {
+            @extend .al-center-fd-row;
+            justify-content: space-between;
+            width: 100%;
+            background-color: $background_white_color;
+            height: 60px;
+            padding: 10px;
+            @include borderradius(5px);
+            margin-top: 5px;
+            input {
+                display: flex;
+                width: 60%;
+                font-size: medium;
+                margin-left: 5px;
+                border: 1px solid rgb(219,219,219);
+                padding-left: 5px;
+                &:focus {
+                    outline: none;
+                   
+                }
+            }
+            
+        }
+
+
+
+        .price-detail-container {
+            width: 100%;
+            height: 40%;
+            background-color: $background_white_color;
+            padding-top: 10px;
+            @include borderradius(5px);
+            margin-top: 5px;
+            .horizontal-div-price-detail{
+                @extend .al-center-fd-row; 
+                justify-content: space-between;
+                padding:0px 10px 0px 10px;
+
+                text {
+                    font-size: 0.7rem;
+                    font-weight:600;
+                }
+                text:first-child {
+                    font-size: 0.7rem;
+                    color: $color-black;
+                    font-weight: bold;
+                }
+            }
+
+            hr {
+                display: block;
+                position: relative;
+                padding: 0;
+                margin: 8px auto;
+                height: 0;
+                width: 100%;
+                max-height: 0;
+                font-size: 1px;
+                line-height: 0;
+                clear: both;
+                border: none;
+                border-top: 1px solid #aaaaaa;
+                border-bottom: 1px solid #ffffff;
+             }
+
+
+             .total-price {
+                @extend .al-center-fd-column;
+                width: 100%;
+                margin-top: 20px;
+                
+                text {
+                    font-size: 2rem;
+                   font-weight: bolder;
+                }
+
+
+                 text:first-child {
+                     font-size: 1rem;
+                     font-weight: 600;
+                     color: $color-black;
+                 }
+             }
+        }
+
+    }
+}

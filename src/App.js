@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+import Home from "./components/Home";
+import PreviewReservation from "./components/PreviewReservation";
+import "./App.scss"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="full-screen-container">
+      <Helmet>
+        <title>Otel Rezervasyon Sistemi</title>
+      </Helmet>
+      <Switch>
+        <Route path='/preview' component={PreviewReservation} />
+        <Route path="/" exact component={Home} />
+        <Redirect to='/' />
+      </Switch>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

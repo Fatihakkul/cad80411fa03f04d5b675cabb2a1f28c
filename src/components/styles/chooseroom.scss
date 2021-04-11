@@ -1,0 +1,107 @@
+@import 'globalstyles';
+
+
+@media (max-width: $breakpoint-tablet) {
+    .chooseroom-container {
+        width: 60% !important;
+        align-self: center;
+    }
+    .room-detail-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: $breakpoint-phone) {
+    .chooseroom-container {
+       width: 100%  !important;
+    }
+    .room-detail {
+        margin-top: 10px;
+    }
+  
+    .room-type {
+        max-width: 350px;
+        overflow: auto;
+        margin-bottom: 10px;
+    }
+}
+.chooseroom-container {
+    @extend .al-center-fd-column;
+    width: 120vh;
+    height: 550px;
+    background-color: white;
+    .chooseroom-header {
+        width: 100%;
+        padding: 10px;
+        background-color: $color-light-gray;
+        @include borderradius(10px);
+
+
+        text {
+            font-weight: bold;
+            color: $color-black;
+        }
+        .reservation-info {
+            @extend .al-center-fd-row;
+            width: 100%;
+            height: 30px;
+            justify-content: space-between;
+            padding: 0px 10px 0px 10px;
+            
+        }
+    }
+    .room-detail-content  {
+        text {
+            font-weight: bold;
+            color: $color-black;
+        }
+    }
+    .room-type {
+        @extend .al-center-fd-row;
+        width: 100%;
+        padding-top: 10px;
+       .room-detail {
+            width: 35vh;
+            height: 26vh;
+            margin-left: 10px;
+            padding:10px 20px 0 20px;
+            border: 1px solid rgb(219,219,219);
+            @include borderradius(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            cursor: pointer;
+            img {
+                width: 30vh;
+            }
+
+            .room-price-container{
+                @extend .al-center-fd-row;
+                justify-content: space-between;
+                text {
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+
+                .room-price {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 5px;
+                    text {
+                        font-size: 0.7rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            
+        }
+
+        .room-scenic {
+            @extend .room-detail
+        }
+     
+    }
+
+}
